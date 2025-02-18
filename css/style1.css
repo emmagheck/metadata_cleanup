@@ -1,17 +1,18 @@
-/* General Styles */
-body {
-    font-family: 'Trebuchet MS', sans-serif;
-    line-height: 1.6;
-    background-color: #e6f3ff;
+.index, .locations, .phases {
+    display: grid;
+    grid-template-rows: repeat(7, auto); /* Rows adjust to content height */
     margin: 0;
-    padding: 0;
+    background-color: #e6f3ff;
+    padding: 20px; /* Adds spacing */
 }
 
-.index, .locations {
-    display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(100px, auto));
+/*.row {
+    display: block; *//* Ensures content stacks naturally *//*
+    border: 1px solid black;
     padding: 20px;
-}
+    background-color: #ffffff;
+    margin-bottom: 10px; *//* Adds spacing between rows *//*
+}*/
 
 .row {
     background: white;
@@ -27,68 +28,116 @@ body {
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Headings */
-h1, h2 {
-    font-family: 'Inter', sans-serif;
-}
 
 h1 {
     text-align: center;
     font-weight: bold;
     font-size: 1.8rem;
+    font-family: "Trebuchet MS";
+    padding: 10px;
 }
 
 h2 {
-    text-align: left;
+    text-align: left; /* Aligns title to the left */
     font-size: 1.4rem;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Adds space below the title */
+    font-family: "Trebuchet MS";
 }
 
 h3 {
     font-size: 1.2rem;
     font-weight: bold;
+    font-family: "Trebuchet MS";
 }
 
-/* Lists */
 ul {
-    padding-left: 20px;
-    list-style-type: disc;
+    padding-left: 20px; /* Indents bullet points */
+    list-style-type: disc; /* Ensures default bullets */
 }
 
 li {
-    text-align: left;
+    text-align: left; /* Aligns list items to the left */
     font-size: 1rem;
     margin: 5px 0;
+    font-family: "Trebuchet MS";
 }
 
-/* Phase Styling */
+.phase2 {
+    color: #B40439;
+    font-weight: bold;
+    font-family: "Trebuchet MS";
+}
+
+.phase3 {
+    color: #0447B4;
+    font-weight: bold;
+}
+
+.phase1 {
+    color: #04671D;
+    font-weight: bold;
+    font-family: "Trebuchet MS";
+}
+
 .phase1, .phase2, .phase3 {
     padding: 5px 10px;
     border-radius: 5px;
     display: inline-block;
-    font-weight: bold;
 }
 
-.phase1 { color: #04671D; background: rgba(4, 103, 29, 0.1); }
-.phase2 { color: #B40439; background: rgba(180, 4, 57, 0.1); }
-.phase3 { color: #0447B4; background: rgba(4, 71, 180, 0.1); }
+.phase1 { background: rgba(4, 103, 29, 0.1); }
+.phase2 { background: rgba(180, 4, 57, 0.1); }
+.phase3 { background: rgba(4, 71, 180, 0.1); }
 
-/* Navigation */
-nav ul {
+
+/* Deadlines section - Styled as buttons */
+.deadlines {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    list-style: none;
+    justify-content: center; /* Center items */
+    gap: 15px; /* Space between items */
+    padding: 0; /* Removes default padding */
+    list-style: none; /* Removes bullet points */
+    margin: 20px 0; /* Adds spacing above and below */
+}
+
+.deadlines li {
+    font-size: 1.2rem;
+    white-space: nowrap; /* Prevents items from breaking into multiple lines */
+    background-color: #0447B4; /* Button background */
+    color: white; /* Text color */
+    padding: 10px 20px;
+    border-radius: 5px; /* Rounded edges */
+    font-weight: bold;
+    text-align: center;
+    cursor: default; /* Prevents pointer cursor */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Button-like shadow */
+    transition: all 0.3s ease-in-out;
+}
+
+.deadlines li:hover {
+    background-color: #03368a; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Navigation Styling */
+nav {
+    background-color: #ffffff;
     padding: 10px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+nav ul {
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers items horizontally */
+    gap: 20px; /* Adds space between items */
+    list-style: none; /* Removes default bullets */
+    padding: 0;
     margin: 0;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav li {
-    display: inline;
+    display: inline; /* Ensures items stay in a row */
 }
 
 nav a {
@@ -99,63 +148,50 @@ nav a {
     transition: all 0.3s ease-in-out;
 }
 
+/* Hover effect with shadow */
 nav a:hover {
-    color: #ffffff;
-    background-color: #0447B4;
-    padding: 10px 20px;
-    border-radius: 5px;
+    color: #0447B4; /* Change text color */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adds a raised shadow effect */
+    background-color: rgba(0, 0, 0, 0.05); /* Subtle background change */
+    border-radius: 5px; /* Soft rounded corners */
+    transform: translateY(-2px); /* Slight lift effect */
 }
 
-/* Deadlines */
-.deadlines {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0;
-    list-style: none;
-    margin: 20px 0;
-}
-
-.deadlines li {
-    font-size: 1.2rem;
-    white-space: nowrap;
-}
-
-.deadlines a {
-    background: #0447B4;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 5px;
-    display: inline-block;
-    transition: 0.3s;
-}
-
-.deadlines a:hover {
-    background: #032e7c;
+/* Current page indicator */
+.current {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adds soft shadow */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .index, .locations {
-        display: flex;
-        flex-direction: column;
+    /* Adjust layout for smaller screens */
+    .index, .locations, .phases {
+        padding: 10px; /* Less padding for smaller screens */
     }
 
+    /* Ensure the content is centered on smaller screens */
     .row {
-        margin-bottom: 15px;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.2rem; /* Smaller font sizes for mobile */
     }
 
     nav ul {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
+        flex-direction: column; /* Stack the links vertically on small screens */
+        align-items: center; /* Center them horizontally */
     }
 
     .deadlines {
-        flex-direction: column;
+        flex-direction: column; /* Stack the deadlines vertically */
         align-items: center;
     }
 
     .deadlines li {
-        margin-bottom: 10px;
+        width: 80%; /* Make buttons full-width on smaller screens */
+        text-align: center;
     }
 }
+
