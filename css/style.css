@@ -14,19 +14,33 @@
     padding: 20px; /* Adds spacing */
 }
 
-.row {
-    display: block; /* Ensures content stacks naturally */
+/*.row {
+    display: block; *//* Ensures content stacks naturally *//*
     border: 1px solid black;
     padding: 20px;
     background-color: #ffffff;
-    margin-bottom: 10px; /* Adds spacing between rows */
+    margin-bottom: 10px; *//* Adds spacing between rows *//*
+}*/
+.row {
+    background: white;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
 }
+
+.row:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
 
 h1 {
     text-align: center;
     font-weight: bold;
     font-size: 1.8rem;
-    font-family: "Courier New";
+    font-family: "Inter", sans-serif;
 }
 
 h2 {
@@ -34,7 +48,7 @@ h2 {
     font-size: 1.4rem;
     font-weight: bold;
     margin-bottom: 10px; /* Adds space below the title */
-    font-family: "Courier New";
+    font-family:"Inter", sans-serif;
 }
 
 
@@ -44,6 +58,10 @@ h3 {
     font-family: "Trebuchet MS";
 }
 
+body {
+    font-family: "Trebuchet MS", sans-serif;
+    line-height: 1.6;
+}
 
 ul {
     padding-left: 20px; /* Indents bullet points */
@@ -57,7 +75,7 @@ li {
     font-family: "Trebuchet MS";
 }
 
-.phase2 {
+/*.phase2 {
     color: #B40439;
     font-weight: bold;
     font-family: "Trebuchet MS";
@@ -72,7 +90,17 @@ li {
     color: #04671D;
     font-weight: bold;
     font-family: "Trebuchet MS";
+}*/
+.phase1, .phase2, .phase3 {
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
 }
+
+.phase1 { background: rgba(4, 103, 29, 0.1); }
+.phase2 { background: rgba(180, 4, 57, 0.1); }
+.phase3 { background: rgba(4, 71, 180, 0.1); }
+
 
 .deadlines {
     display: flex;
@@ -87,11 +115,31 @@ li {
     white-space: nowrap; /* Prevents items from breaking into multiple lines */
 }
 
+/*
 .deadlines a {
-    text-decoration: none; /* Removes underline */
-    color: black; /* Default text color */
+    text-decoration: none; */
+/* Removes underline *//*
+
+    color: black; */
+/* Default text color *//*
+
     font-weight: bold;
 }
+*/
+
+.deadlines a {
+    background: #0447B4;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.deadlines a:hover {
+    background: #032e7c;
+}
+
 
 .document {
     font-family:"Trebuchet MS";
@@ -103,13 +151,19 @@ li {
     font-family:"Trebuchet MS";
 }
 
-nav ul {
-    display: flex; /* Enables flexbox */
-    justify-content: center; /* Centers items horizontally */
-    gap: 20px; /* Adds space between items */
-    list-style: none; /* Removes default bullets */
+/*nav ul {
+    display: flex; *//* Enables flexbox *//*
+    justify-content: center; *//* Centers items horizontally *//*
+    gap: 20px; *//* Adds space between items *//*
+    list-style: none; *//* Removes default bullets *//*
     padding: 0;
     margin: 0;
+}*/
+nav ul {
+    background: white;
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav li {
@@ -123,12 +177,20 @@ nav a {
     transition: all 0.3s ease-in-out;
 }
 
+/*nav a:hover {
+    color: #0447B4; *//* Change text color *//*
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); *//* Adds a raised shadow effect *//*
+    background-color: rgba(0, 0, 0, 0.05); *//* Optional: subtle background change *//*
+    border-radius: 5px; *//* Soft rounded corners *//*
+}*/
+
 nav a:hover {
-    color: #0447B4; /* Change text color */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds a raised shadow effect */
-    background-color: rgba(0, 0, 0, 0.05); /* Optional: subtle background change */
-    border-radius: 5px; /* Soft rounded corners */
+    color: #ffffff;
+    background-color: #0447B4;
+    transition: 0.3s ease-in-out;
+    padding: 10px 20px;
 }
+
 
 .current {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adds soft shadow */

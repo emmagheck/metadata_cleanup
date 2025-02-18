@@ -1,0 +1,161 @@
+/* General Styles */
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    line-height: 1.6;
+    background-color: #e6f3ff;
+    margin: 0;
+    padding: 0;
+}
+
+.index, .locations {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(100px, auto));
+    padding: 20px;
+}
+
+.row {
+    background: white;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+}
+
+.row:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Headings */
+h1, h2 {
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+h2 {
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Lists */
+ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+li {
+    text-align: left;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Phase Styling */
+.phase1, .phase2, .phase3 {
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.phase1 { color: #04671D; background: rgba(4, 103, 29, 0.1); }
+.phase2 { color: #B40439; background: rgba(180, 4, 57, 0.1); }
+.phase3 { color: #0447B4; background: rgba(4, 71, 180, 0.1); }
+
+/* Navigation */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background-color: #0447B4;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Deadlines */
+.deadlines {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    list-style: none;
+    margin: 20px 0;
+}
+
+.deadlines li {
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+.deadlines a {
+    background: #0447B4;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.deadlines a:hover {
+    background: #032e7c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .index, .locations {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row {
+        margin-bottom: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .deadlines {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .deadlines li {
+        margin-bottom: 10px;
+    }
+}
